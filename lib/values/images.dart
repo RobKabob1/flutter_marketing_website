@@ -7,7 +7,7 @@ class ImagePath {
 
   // Logo
   static const String logoDark = "$imageDir/deepsBackground.png";
-  static const String logoLight = "$imageDir/logo_light.png";
+  static const String logoLight = "$imageDir/deepsBackground.png";
 
   // Blobs
   static const String blobAsh = "$imageDir/blob_ash.png";
