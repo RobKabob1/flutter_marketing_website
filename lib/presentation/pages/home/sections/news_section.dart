@@ -3,7 +3,7 @@ import 'package:deeps_website/presentation/layout/adaptive.dart';
 import 'package:deeps_website/presentation/widgets/buttons/deeps_website_button.dart';
 import 'package:deeps_website/presentation/widgets/content_area.dart';
 import 'package:deeps_website/presentation/widgets/deeps_website_info_section.dart';
-import 'package:deeps_website/presentation/widgets/project_item.dart';
+import 'package:deeps_website/presentation/widgets/news_item.dart';
 import 'package:deeps_website/presentation/widgets/spaces.dart';
 import 'package:deeps_website/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -12,54 +12,54 @@ import 'package:visibility_detector/visibility_detector.dart';
 const double kSpacing = 20.0;
 const double kRunSpacing = 16.0;
 
-class ProjectCategoryData {
+class NewsCategoryData {
   final String title;
   final int number;
   bool isSelected;
 
-  ProjectCategoryData({
+  NewsCategoryData({
     required this.title,
     required this.number,
     this.isSelected = false,
   });
 }
 
-class ProjectsSection extends StatefulWidget {
-  const ProjectsSection({super.key});
+class NewsSection extends StatefulWidget {
+  const NewsSection({super.key});
 
   @override
-  ProjectsSectionState createState() => ProjectsSectionState();
+  NewsSectionState createState() => NewsSectionState();
 }
 
-class ProjectsSectionState extends State<ProjectsSection>
+class NewsSectionState extends State<NewsSection>
     with SingleTickerProviderStateMixin {
-  late AnimationController _projectController;
-  late Animation<double> _projectScaleAnimation;
-  List<List<ProjectData>> projects = [
-    Data.allProjects,
+  late AnimationController _newsController;
+  late Animation<double> _newsScaleAnimation;
+  List<List<NewsData>> news = [
+    Data.allNews,
     Data.branding,
     Data.packaging,
     Data.photograhy,
     Data.webDesign,
   ];
-  late List<ProjectData> selectedProject;
-  late List<ProjectCategoryData> projectCategories;
+  late List<NewsData> selectedNews;
+  late List<NewsCategoryData> newsCategories;
 
   @override
   void initState() {
     super.initState();
-    selectedProject = projects[0];
-    projectCategories = Data.projectCategories;
-    _projectController = AnimationController(
+    selectedNews = news[0];
+    newsCategories = Data.newsCategories;
+    _newsController = AnimationController(
       duration: const Duration(milliseconds: 500),
       vsync: this,
     );
-    _projectScaleAnimation = Tween<double>(
+    _newsScaleAnimation = Tween<double>(
       begin: 0,
       end: 1,
     ).animate(
       CurvedAnimation(
-        parent: _projectController,
+        parent: _newsController,
         curve: Curves.fastOutSlowIn,
       ),
     );
@@ -67,13 +67,13 @@ class ProjectsSectionState extends State<ProjectsSection>
 
   @override
   void dispose() {
-    _projectController.dispose();
+    _newsController.dispose();
     super.dispose();
   }
 
-  Future<void> _playProjectAnimation() async {
+  Future<void> _playNewsAnimation() async {
     try {
-      await _projectController.forward().orCancel;
+      await _newsController.forward().orCancel;
     } on TickerCanceled {
       // the animation got canceled, probably because it was disposed of
     }
@@ -84,11 +84,11 @@ class ProjectsSectionState extends State<ProjectsSection>
     double screenWidth = widthOfScreen(context) - (getSidePadding(context) * 2);
     double contentAreaWidth = screenWidth;
     return VisibilityDetector(
-      key: const Key('project-section-sm'),
+      key: const Key('news-section-sm'),
       onVisibilityChanged: (visibilityInfo) {
         double visiblePercentage = visibilityInfo.visibleFraction * 100;
         if (visiblePercentage > 20) {
-          _playProjectAnimation();
+          _playNewsAnimation();
         }
       },
       child: ResponsiveBuilder(
@@ -108,7 +108,7 @@ class ProjectsSectionState extends State<ProjectsSection>
                     _buildDeepsWebsiteInfoSectionSm(),
                     const SpaceH40(),
                     DeepsWebsiteButton(
-                      buttonTitle: StringConst.allProjects,
+                      buttonTitle: StringConst.allNews,
                       buttonColor: AppColors.primaryColor,
                       onPressed: () {},
                     ),
@@ -116,13 +116,13 @@ class ProjectsSectionState extends State<ProjectsSection>
                     Wrap(
                       spacing: kSpacing,
                       runSpacing: kRunSpacing,
-                      children: _buildProjectCategories(projectCategories),
+                      children: _buildNewsCategories(newsCategories),
                     ),
                     const SpaceH40(),
                     Wrap(
                       runSpacing: assignHeight(context, 0.05),
-                      children: _buildProjects(
-                        selectedProject,
+                      children: _buildNews(
+                        selectedNews,
                         isMobile: true,
                       ),
                     ),
@@ -132,11 +132,11 @@ class ProjectsSectionState extends State<ProjectsSection>
             );
           } else {
             return VisibilityDetector(
-              key: const Key('project-section_lg'),
+              key: const Key('news-section_lg'),
               onVisibilityChanged: (visibilityInfo) {
                 double visiblePercentage = visibilityInfo.visibleFraction * 100;
                 if (visiblePercentage > 40) {
-                  _playProjectAnimation();
+                  _playNewsAnimation();
                 }
               },
               child: Column(
@@ -157,7 +157,7 @@ class ProjectsSectionState extends State<ProjectsSection>
                           ),
                           const Spacer(),
                           DeepsWebsiteButton(
-                            buttonTitle: StringConst.allProjects,
+                            buttonTitle: StringConst.allNews,
                             buttonColor: AppColors.primaryColor,
                             onPressed: () {},
                           ),
@@ -171,7 +171,7 @@ class ProjectsSectionState extends State<ProjectsSection>
                     child: Wrap(
                       spacing: assignWidth(context, 0.025),
                       runSpacing: assignWidth(context, 0.025),
-                      children: _buildProjects(selectedProject),
+                      children: _buildNews(selectedNews),
                     ),
                   ),
                 ],
@@ -186,9 +186,9 @@ class ProjectsSectionState extends State<ProjectsSection>
   Widget _buildDeepsWebsiteInfoSectionSm() {
     return const DeepsWebsiteInfoSection2(
       sectionTitle: StringConst.myWorks,
-      title1: StringConst.meetMyProjects,
+      title1: StringConst.meetMyNews,
       hasTitle2: false,
-      body: StringConst.projectsDesc,
+      body: StringConst.newsDesc,
 //      child: ,
     );
   }
@@ -196,40 +196,40 @@ class ProjectsSectionState extends State<ProjectsSection>
   Widget _buildDeepsWebsiteInfoSectionLg() {
     return DeepsWebsiteInfoSection1(
       sectionTitle: StringConst.myWorks,
-      title1: StringConst.meetMyProjects,
+      title1: StringConst.meetMyNews,
       hasTitle2: false,
-      body: StringConst.projectsDesc,
+      body: StringConst.newsDesc,
       child: Wrap(
         spacing: kSpacing,
         runSpacing: kRunSpacing,
-        children: _buildProjectCategories(projectCategories),
+        children: _buildNewsCategories(newsCategories),
       ),
     );
   }
 
-  List<Widget> _buildProjectCategories(List<ProjectCategoryData> categories) {
+  List<Widget> _buildNewsCategories(List<NewsCategoryData> categories) {
     List<Widget> items = [];
 
     for (int index = 0; index < categories.length; index++) {
       items.add(
-        ProjectCategory(
+        NewsCategory(
           title: categories[index].title,
           number: categories[index].number,
           isSelected: categories[index].isSelected,
-          onTap: () => onProjectCategoryTap(index),
+          onTap: () => onNewsCategoryTap(index),
         ),
       );
     }
     return items;
   }
 
-  List<Widget> _buildProjects(List<ProjectData> data, {bool isMobile = false}) {
+  List<Widget> _buildNews(List<NewsData> data, {bool isMobile = false}) {
     List<Widget> items = [];
     for (int index = 0; index < data.length; index++) {
       items.add(
         ScaleTransition(
-          scale: _projectScaleAnimation,
-          child: ProjectItem(
+          scale: _newsScaleAnimation,
+          child: NewsItem(
             width: isMobile
                 ? assignWidth(context, data[index].mobileWidth)
                 : assignWidth(context, data[index].width),
@@ -241,7 +241,7 @@ class ProjectsSectionState extends State<ProjectsSection>
                 : assignHeight(context, data[index].height) / 3,
             title: data[index].title,
             subtitle: data[index].category,
-            imageUrl: data[index].projectCoverUrl,
+            imageUrl: data[index].newsCoverUrl,
           ),
         ),
       );
@@ -250,30 +250,30 @@ class ProjectsSectionState extends State<ProjectsSection>
     return items;
   }
 
-  void onProjectCategoryTap(index) {
-    _projectController.reset();
+  void onNewsCategoryTap(index) {
+    _newsController.reset();
     changeCategorySelected(index);
     setState(() {
-      selectedProject = projects[index];
-      _playProjectAnimation();
+      selectedNews = news[index];
+      _playNewsAnimation();
     });
   }
 
   changeCategorySelected(int selectedIndex) {
-    for (int index = 0; index < projectCategories.length; index++) {
+    for (int index = 0; index < newsCategories.length; index++) {
       if (index == selectedIndex) {
         setState(() {
-          projectCategories[selectedIndex].isSelected = true;
+          newsCategories[selectedIndex].isSelected = true;
         });
       } else {
-        projectCategories[index].isSelected = false;
+        newsCategories[index].isSelected = false;
       }
     }
   }
 }
 
-class ProjectCategory extends StatefulWidget {
-  const ProjectCategory({
+class NewsCategory extends StatefulWidget {
+  const NewsCategory({
     super.key,
     required this.title,
     required this.number,
@@ -297,10 +297,10 @@ class ProjectCategory extends StatefulWidget {
   final bool isSelected;
 
   @override
-  ProjectCategoryState createState() => ProjectCategoryState();
+  NewsCategoryState createState() => NewsCategoryState();
 }
 
-class ProjectCategoryState extends State<ProjectCategory>
+class NewsCategoryState extends State<NewsCategory>
     with SingleTickerProviderStateMixin {
   bool _isHovering = false;
   late AnimationController _controller;
@@ -346,10 +346,10 @@ class ProjectCategoryState extends State<ProjectCategory>
               ),
               WidgetSpan(
                 child: widget.isSelected
-                    ? numberOfProjectItems()
+                    ? numberOfNewsItems()
                     : FadeTransition(
                         opacity: _controller.view,
-                        child: numberOfProjectItems(),
+                        child: numberOfNewsItems(),
                       ),
               )
             ],
@@ -359,7 +359,7 @@ class ProjectCategoryState extends State<ProjectCategory>
     );
   }
 
-  Widget numberOfProjectItems() {
+  Widget numberOfNewsItems() {
     TextTheme textTheme = Theme.of(context).textTheme;
 
     return Transform.translate(

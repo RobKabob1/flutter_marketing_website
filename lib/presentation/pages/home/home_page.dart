@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:deeps_website/presentation/layout/adaptive.dart';
-import 'package:deeps_website/presentation/pages/home/sections/about_me_section.dart';
-import 'package:deeps_website/presentation/pages/home/sections/awards_section.dart';
 import 'package:deeps_website/presentation/pages/home/sections/footer_section.dart';
 import 'package:deeps_website/presentation/pages/home/sections/header_section/header_section.dart';
 import 'package:deeps_website/presentation/pages/home/sections/nav_section/nav_section_mobile.dart';
 import 'package:deeps_website/presentation/pages/home/sections/nav_section/nav_section_web.dart';
-import 'package:deeps_website/presentation/pages/home/sections/projects_section.dart';
-import 'package:deeps_website/presentation/pages/home/sections/skills_section.dart';
-import 'package:deeps_website/presentation/pages/home/sections/statistics_section.dart';
+import 'package:deeps_website/presentation/pages/home/sections/news_section.dart';
 import 'package:deeps_website/presentation/widgets/app_drawer.dart';
 import 'package:deeps_website/presentation/widgets/nav_item.dart';
 import 'package:deeps_website/utils/functions.dart';
 import 'package:deeps_website/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:visibility_detector/visibility_detector.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -41,7 +36,6 @@ class HomePageState extends State<HomePage>
 
   final List<NavItemData> navItems = [
     NavItemData(name: StringConst.home, key: GlobalKey(), isSelected: true),
-    NavItemData(name: StringConst.wiki, key: GlobalKey()),
     NavItemData(name: StringConst.leaderboards, key: GlobalKey()),
     NavItemData(name: StringConst.stellarMap, key: GlobalKey()),
     NavItemData(name: StringConst.market, key: GlobalKey()),
@@ -132,25 +126,10 @@ class HomePageState extends State<HomePage>
                             key: navItems[0].key,
                           ),
                           SizedBox(height: spacerHeight),
-                          VisibilityDetector(
-                            key: const Key("wiki"),
-                            onVisibilityChanged: (visibilityInfo) {
-                              double visiblePercentage =
-                                  visibilityInfo.visibleFraction * 100;
-                              if (visiblePercentage > 10) {
-                                _controller.forward();
-                              }
-                            },
-                            child: Container(
-                              key: navItems[1].key,
-                              child: const AboutMeSection(),
-                            ),
-                          ),
                         ],
                       )
                     ],
                   ),
-                  SizedBox(height: spacerHeight),
                   Stack(
                     children: [
                       Positioned(
@@ -164,16 +143,10 @@ class HomePageState extends State<HomePage>
                       ),
                       Column(
                         children: [
-                          Container(
-                            key: navItems[2].key,
-                            child: const SkillsSection(),
-                          ),
-                          SizedBox(height: spacerHeight),
-                          const StatisticsSection(),
                           SizedBox(height: spacerHeight),
                           Container(
-                            key: navItems[3].key,
-                            child: const ProjectsSection(),
+                            key: navItems[1].key,
+                            child: const NewsSection(),
                           ),
                         ],
                       ),
@@ -186,13 +159,9 @@ class HomePageState extends State<HomePage>
                         left: -assignWidth(context, 0.6),
                         child: Image.asset(ImagePath.blobAsh),
                       ),
-                      Column(
+                      const Column(
                         children: [
-                          Container(
-                            key: navItems[4].key,
-                            child: const AwardsSection(),
-                          ),
-                          const FooterSection(),
+                          FooterSection(),
                         ],
                       )
                     ],

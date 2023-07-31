@@ -73,19 +73,13 @@ class Data {
         description: "",
         iconData: Icons.pages_outlined), //not being used
   ];
-  static List<StatItemData> statItemsData = [
-    StatItemData(value: 120, subtitle: StringConst.happyClients),
-    StatItemData(value: 10, subtitle: StringConst.yearsOfExperience),
-    StatItemData(value: 230, subtitle: StringConst.incredibleProjects),
-    StatItemData(value: 18, subtitle: StringConst.awardWinning),
-  ];
 
-  static List<ProjectCategoryData> projectCategories = [
-    ProjectCategoryData(title: StringConst.all, number: 6, isSelected: true),
-    ProjectCategoryData(title: StringConst.branding, number: 1),
-    ProjectCategoryData(title: StringConst.packaging, number: 1),
-    ProjectCategoryData(title: StringConst.photographer, number: 2),
-    ProjectCategoryData(title: StringConst.webDesign, number: 3),
+  static List<NewsCategoryData> newsCategories = [
+    NewsCategoryData(title: StringConst.all, number: 6, isSelected: true),
+    NewsCategoryData(title: StringConst.branding, number: 1),
+    NewsCategoryData(title: StringConst.packaging, number: 1),
+    NewsCategoryData(title: StringConst.photographer, number: 2),
+    NewsCategoryData(title: StringConst.webDesign, number: 3),
   ];
 
   static List<String> awards1 = [
@@ -150,95 +144,95 @@ class Data {
     ),
   ];
 
-  static List<ProjectData> allProjects = [
-    ProjectData(
+  static List<NewsData> allNews = [
+    NewsData(
       title: StringConst.portfolio1Title,
       category: StringConst.photography,
-      projectCoverUrl: ImagePath.portfolio1,
+      newsCoverUrl: ImagePath.portfolio1,
       width: 0.5,
       mobileHeight: 0.3,
     ),
-    ProjectData(
+    NewsData(
       title: StringConst.portfolio2Title,
       category: StringConst.webDesign,
-      projectCoverUrl: ImagePath.portfolio2,
+      newsCoverUrl: ImagePath.portfolio2,
       width: 0.225,
     ),
-    ProjectData(
+    NewsData(
       title: StringConst.portfolio3Title,
       category: StringConst.branding,
-      projectCoverUrl: ImagePath.portfolio3,
+      newsCoverUrl: ImagePath.portfolio3,
       width: 0.225,
     ),
-    ProjectData(
+    NewsData(
       title: StringConst.portfolio4Title,
       category: StringConst.webDesign,
-      projectCoverUrl: ImagePath.portfolio4,
+      newsCoverUrl: ImagePath.portfolio4,
       width: 0.2375,
     ),
-    ProjectData(
+    NewsData(
       title: StringConst.portfolio5Title,
       category: StringConst.packaging,
-      projectCoverUrl: ImagePath.portfolio5,
+      newsCoverUrl: ImagePath.portfolio5,
       width: 0.2375,
     ),
-    ProjectData(
+    NewsData(
       title: StringConst.portfolio6Title,
       category: StringConst.photography,
-      projectCoverUrl: ImagePath.portfolio6,
+      newsCoverUrl: ImagePath.portfolio6,
       width: 0.475,
       mobileHeight: 0.3,
     ),
   ];
-  static List<ProjectData> branding = [
-    ProjectData(
+  static List<NewsData> branding = [
+    NewsData(
       title: StringConst.portfolio3Title,
       category: StringConst.branding,
-      projectCoverUrl: ImagePath.portfolio3,
+      newsCoverUrl: ImagePath.portfolio3,
       width: 0.225,
     ),
   ];
-  static List<ProjectData> packaging = [
-    ProjectData(
+  static List<NewsData> packaging = [
+    NewsData(
       title: StringConst.portfolio5Title,
       category: StringConst.packaging,
-      projectCoverUrl: ImagePath.portfolio5,
+      newsCoverUrl: ImagePath.portfolio5,
       width: 0.2375,
     ),
   ];
-  static List<ProjectData> photograhy = [
-    ProjectData(
+  static List<NewsData> photograhy = [
+    NewsData(
       title: StringConst.portfolio1Title,
       category: StringConst.photography,
-      projectCoverUrl: ImagePath.portfolio1,
+      newsCoverUrl: ImagePath.portfolio1,
       width: 0.5,
       mobileHeight: 0.3,
     ),
-    ProjectData(
+    NewsData(
       title: StringConst.portfolio6Title,
       category: StringConst.photography,
-      projectCoverUrl: ImagePath.portfolio6,
+      newsCoverUrl: ImagePath.portfolio6,
       width: 0.475,
       mobileHeight: 0.3,
     ),
   ];
-  static List<ProjectData> webDesign = [
-    ProjectData(
+  static List<NewsData> webDesign = [
+    NewsData(
       title: StringConst.portfolio2Title,
       category: StringConst.webDesign,
-      projectCoverUrl: ImagePath.portfolio2,
+      newsCoverUrl: ImagePath.portfolio2,
       width: 0.225,
     ),
-    ProjectData(
+    NewsData(
       title: StringConst.portfolio4Title,
       category: StringConst.webDesign,
-      projectCoverUrl: ImagePath.portfolio4,
+      newsCoverUrl: ImagePath.portfolio4,
       width: 0.2375,
     ),
-    ProjectData(
+    NewsData(
       title: StringConst.portfolio5Title,
       category: StringConst.packaging,
-      projectCoverUrl: ImagePath.portfolio5,
+      newsCoverUrl: ImagePath.portfolio5,
       width: 0.2375,
     ),
   ];
