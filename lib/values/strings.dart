@@ -22,18 +22,16 @@ class StringConst {
   static const String firstName = "Step Pay";
   static const String intro = "Deeps";
   static const String position = "Mobile space warfare";
-  static const String aboutDev =
-      "Product Designer and Digital Creative Director working in design field for 13 years so far, specialized in UI/UX, Branding and digital designs.";
+  static const String aboutGame =
+      "Launch your empire in a new universe. Conquer worlds, expand your armada, and explore unique landscapes all from your mobile device.";
   static const String aboutMe1 =
       "Product Designer and Digital Creative Director working in design field for";
   static const String aboutMe2 =
       "13 years so far, specialized in UI/UX, Branding and digital designs.";
-  static const String downloadCV = "Download CV";
-  static const String email = "Email";
   static const String devEmail2 = "robert@steppay.us";
   static const String behance = "Behance";
   static const String behanceID = "behance.net/deeps_website";
-  static const String hireMeNow = "Hire Me Now";
+  static const String getStartedToday = "Get Started Today";
   static const String uiUX = "UI/UX Designer";
   static const String uiUXDesc = "creative websites for you";
   static const String photographer = "Photographer";

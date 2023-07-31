@@ -49,8 +49,6 @@ class HeaderSectionMobileState extends State<HeaderSectionMobile>
     double contentAreaWidth = screenWidth;
     TextStyle? bodyTextStyle =
         textTheme.bodyLarge?.copyWith(fontSize: bodyTextSizeSm);
-    TextStyle? socialTitleStyle =
-        textTheme.titleMedium?.copyWith(fontSize: socialTextSizeSm);
 
     double buttonWidth = 80;
     double buttonHeight = 48;
@@ -176,47 +174,12 @@ class HeaderSectionMobileState extends State<HeaderSectionMobile>
                               constraints:
                                   BoxConstraints(maxWidth: screenWidth * 0.5),
                               child: SelectableText(
-                                StringConst.aboutDev,
+                                StringConst.aboutGame,
                                 style: bodyTextStyle?.copyWith(
                                   height: 1.5,
                                   // color: AppColors.black,
                                 ),
                               ),
-                            ),
-                            const SpaceH30(),
-                            Wrap(
-                              // mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    SelectableText(
-                                      "${StringConst.email}:",
-                                      style: socialTitleStyle,
-                                    ),
-                                    const SpaceH8(),
-                                    SelectableText(
-                                      StringConst.devEmail2,
-                                      style: bodyTextStyle,
-                                    ),
-                                  ],
-                                ),
-                                const SpaceW16(),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    SelectableText(
-                                      "${StringConst.behance}:",
-                                      style: socialTitleStyle,
-                                    ),
-                                    const SpaceH8(),
-                                    SelectableText(
-                                      StringConst.behanceID,
-                                      style: bodyTextStyle,
-                                    ),
-                                  ],
-                                ),
-                              ],
                             ),
                             const SpaceH40(),
                             Row(
@@ -224,23 +187,9 @@ class HeaderSectionMobileState extends State<HeaderSectionMobile>
                                 DeepsWebsiteButton(
                                   width: buttonWidth,
                                   height: buttonHeight,
-                                  buttonTitle: StringConst.downloadCV,
+                                  buttonTitle: StringConst.getStartedToday,
                                   onPressed: () {},
                                 ),
-                                const SpaceW16(),
-                                DeepsWebsiteButton(
-                                  width: buttonWidth,
-                                  height: buttonHeight,
-                                  buttonTitle: StringConst.hireMeNow,
-                                  onPressed: () {},
-                                ),
-                                // deeps_websiteButtonLink(
-                                //   width: buttonWidth,
-                                //   height: buttonHeight,
-                                //   url: StringConst.EMAIL_URL,
-                                //   buttonColor: AppColors.primaryColor,
-                                //   buttonTitle: StringConst.HIRE_ME_NOW,
-                                // ),
                               ],
                             ),
                             const SpaceH30(),

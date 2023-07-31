@@ -53,14 +53,10 @@ class HeaderSectionWebState extends State<HeaderSectionWeb>
     );
     double bodyTextSize =
         responsiveSize(context, bodyTextSizeSm, bodyTextSizeLg);
-    double socialTextSize =
-        responsiveSize(context, socialTextSizeSm, socialTextSizeLg);
     double screenWidth = widthOfScreen(context);
     double contentAreaWidth = screenWidth;
     TextStyle? bodyTextStyle =
         textTheme.bodyLarge?.copyWith(fontSize: bodyTextSize);
-    TextStyle? socialTitleStyle =
-        textTheme.titleMedium?.copyWith(fontSize: socialTextSize);
 
     List<Widget> cardsForTabletView = buildCardRow(
       context: context,
@@ -200,44 +196,9 @@ class HeaderSectionWebState extends State<HeaderSectionWeb>
                               constraints:
                                   BoxConstraints(maxWidth: screenWidth * 0.35),
                               child: SelectableText(
-                                StringConst.aboutDev,
+                                StringConst.aboutGame,
                                 style: bodyTextStyle?.copyWith(height: 1.5),
                               ),
-                            ),
-                            const SpaceH30(),
-                            Wrap(
-                              // mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    SelectableText(
-                                      "${StringConst.email}:",
-                                      style: socialTitleStyle,
-                                    ),
-                                    const SpaceH8(),
-                                    SelectableText(
-                                      StringConst.devEmail2,
-                                      style: bodyTextStyle,
-                                    ),
-                                  ],
-                                ),
-                                const SpaceW16(),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    SelectableText(
-                                      "${StringConst.behance}:",
-                                      style: socialTitleStyle,
-                                    ),
-                                    const SpaceH8(),
-                                    SelectableText(
-                                      StringConst.behanceID,
-                                      style: bodyTextStyle,
-                                    ),
-                                  ],
-                                ),
-                              ],
                             ),
                             const SpaceH40(),
                             Row(
@@ -245,15 +206,7 @@ class HeaderSectionWebState extends State<HeaderSectionWeb>
                                 DeepsWebsiteButton(
                                   width: buttonWidth,
                                   height: buttonHeight,
-                                  buttonTitle: StringConst.downloadCV,
-                                  buttonColor: AppColors.primaryColor,
-                                  onPressed: () {},
-                                ),
-                                const SpaceW16(),
-                                DeepsWebsiteButton(
-                                  width: buttonWidth,
-                                  height: buttonHeight,
-                                  buttonTitle: StringConst.hireMeNow,
+                                  buttonTitle: StringConst.getStartedToday,
                                   opensUrl: true,
                                   url: StringConst.emailURL,
                                   // onPressed: () =>
