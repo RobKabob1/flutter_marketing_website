@@ -2,7 +2,7 @@ part of values;
 
 class ImagePath {
   //images route
-  static const String imageDir = "../images";
+  static const String imageDir = "images";
 
   // Logo
   static const String logoDark = "$imageDir/deepsBackground.png";
