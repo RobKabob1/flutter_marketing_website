@@ -45,10 +45,10 @@ class FooterSectionState extends State<FooterSection> {
     double contentAreaWidth = screenWidth;
     double contentAreaHeight = responsiveSize(
       context,
-      screenHeight,
-      screenHeight * 0.7,
-      md: screenHeight * 0.85,
-      sm: screenHeight * 0.85,
+      screenHeight * 0.2,
+      screenHeight * 0.2,
+      md: screenHeight * 0.2,
+      sm: screenHeight * 0.2,
     );
 
     return ContentArea(
@@ -127,7 +127,6 @@ class FooterSectionState extends State<FooterSection> {
     required double width,
     required double height,
   }) {
-    TextTheme textTheme = Theme.of(context).textTheme;
     return ContentArea(
       width: width,
       backgroundColor: AppColors.black400,
@@ -163,13 +162,6 @@ class FooterSectionState extends State<FooterSection> {
               child: Column(
                 children: [
                   const SpaceH80(),
-                  Text(
-                    StringConst.letsTalk,
-                    textAlign: TextAlign.center,
-                    style: textTheme.headlineMedium
-                        ?.copyWith(color: AppColors.white),
-                  ),
-                  const SpaceH60(),
                   ..._buildFooterItems(footerItems),
                   const SpaceH80(),
                 ],
@@ -185,7 +177,6 @@ class FooterSectionState extends State<FooterSection> {
     required double width,
     required double height,
   }) {
-    TextTheme textTheme = Theme.of(context).textTheme;
     return ContentArea(
       width: width,
       height: height,
@@ -221,12 +212,6 @@ class FooterSectionState extends State<FooterSection> {
             ),
             Column(
               children: [
-                const Spacer(flex: 1),
-                Text(
-                  StringConst.letsTalk,
-                  style:
-                      textTheme.displaySmall?.copyWith(color: AppColors.white),
-                ),
                 const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

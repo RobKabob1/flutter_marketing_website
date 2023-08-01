@@ -36,6 +36,7 @@ class HomePageState extends State<HomePage>
 
   final List<NavItemData> navItems = [
     NavItemData(name: StringConst.home, key: GlobalKey(), isSelected: true),
+    NavItemData(name: StringConst.news, key: GlobalKey()),
     NavItemData(name: StringConst.leaderboards, key: GlobalKey()),
     NavItemData(name: StringConst.stellarMap, key: GlobalKey()),
     NavItemData(name: StringConst.market, key: GlobalKey()),

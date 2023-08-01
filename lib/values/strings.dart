@@ -50,7 +50,6 @@ class StringConst {
   static const String portfolio6Title = "Created Resources";
 
   //Footer Section
-  static const String letsTalk = "Get Connected!";
   static const String phoneMe = "Phone Us";
   static const String phoneNumber = "+1 409 720 9811";
   static const String mailMe = "Mail Us";
