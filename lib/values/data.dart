@@ -18,14 +18,6 @@ class Data {
       buttonColor: AppColors.pink300,
       iconColor: AppColors.white,
     ),
-    SocialButton2Data(
-      title: StringConst.instagram,
-      iconData: FontAwesomeIcons.instagram,
-      url: StringConst.instagramURL,
-      titleColor: AppColors.yellow300,
-      buttonColor: AppColors.yellow300,
-      iconColor: AppColors.white,
-    ),
   ];
 
   static List<SkillLevelData> skillLevelData = [
@@ -80,44 +72,6 @@ class Data {
     NewsCategoryData(title: StringConst.guides, number: 1),
     NewsCategoryData(title: StringConst.photographer, number: 2),
     NewsCategoryData(title: StringConst.webDesign, number: 3),
-  ];
-
-  static List<String> awards1 = [
-    StringConst.awards1,
-    StringConst.awards2,
-    StringConst.awards3,
-    StringConst.awards4,
-    StringConst.awards5,
-  ];
-  static List<String> awards2 = [
-    StringConst.awards6,
-    StringConst.awards7,
-    StringConst.awards8,
-    StringConst.awards9,
-    StringConst.awards10,
-  ];
-  static List<BlogCardData> blogData = [
-    BlogCardData(
-      category: StringConst.blogCategory1,
-      title: StringConst.blogTitle1,
-      date: StringConst.blogDate,
-      buttonText: StringConst.readMore,
-      imageUrl: ImagePath.blog01,
-    ),
-    BlogCardData(
-      category: StringConst.blogCategory2,
-      title: StringConst.blogTitle2,
-      date: StringConst.blogDate,
-      buttonText: StringConst.readMore,
-      imageUrl: ImagePath.blog02,
-    ),
-    BlogCardData(
-      category: StringConst.blogCategory3,
-      title: StringConst.blogTitle3,
-      date: StringConst.blogDate,
-      buttonText: StringConst.readMore,
-      imageUrl: ImagePath.blog03,
-    ),
   ];
 
   static List<DeepsWebsiteCardData> deepsWebsiteCardData = [

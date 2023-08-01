@@ -103,13 +103,13 @@ class StringConst {
   static const String awardWinningNum = "18";
 
   //Projects Section
-  static const String meetMyNews = "Meet My Projects";
+  static const String ourNews = "News";
   static const String myWorks = "my works";
 
   static const String newsHeader = "News";
   static const String newsDesc =
-      "Product Designer and Digital Creative Director working in design field for 13 years so far, specialized in UI/UX, Branding and digital designs. These are the words we live by in everything we do.";
-  static const String allNews = "All Projects";
+      "Keep up to date with the latest information on our flagship game.";
+  static const String allNews = "All News";
   static const String all = "All";
   static const String news = "News";
   static const String guides = "Guides";
@@ -122,58 +122,8 @@ class StringConst {
   static const String portfolio5Title = "Ships";
   static const String portfolio6Title = "Created Resources";
 
-  //Awards & Section
-  static const String my = "My";
-  static const String cV = "CV";
-  static const String myAwards = "my awards";
-  static const String awardsTitle = "Honours & Awards";
-  static const String awardsDesc =
-      "Since 2015 I have been a visionary and a reliable software engineering partner for world-class brands.";
-  static const String awardsTypeTitle1 = "In Press";
-  static const String awardsTypeTitle2 = "Awards";
-  static const String awards1 = "Forbes";
-  static const String awards2 = "New York Times";
-  static const String awards3 = "Smashing Magazine";
-  static const String awards4 = "Entrepreneur";
-  static const String awards5 = "First Magazine";
-  static const String awards6 = "The Type Direction Club 60";
-  static const String awards7 = "ClassiCon-Brochure 2017";
-  static const String awards8 = "The Good Design Awards 2017";
-  static const String awards9 = "For Print Only-Under consideration";
-  static const String awards10 = "CI Magazine 2017";
-
   //Brands Section
-  static const String brandsSectionTitle = "Brands I've worked with";
   static const String hireMe = "Hire me";
-
-  //Testimonials Section
-  static const String myTestimonials = "my testimonials";
-  static const String testimonialsSectionTitle = "Client Testimonials";
-  static const String testimonials1Name = "Arnold Wilson";
-  static const String testimonials1Position = "PHP Developer";
-  static const String testimonials1 =
-      "Ameli has quickly become an indispensable partner in capturing the innovation in our products in a way that best represents our brand voice. She bring fresh ideas and challenges to the way our industry typically markets products. An integrated marketing campaign supporting a major 2015 product launch exceeded goals by as much as 300%.";
-  static const String testimonials2Name = "Ronald Green";
-  static const String testimonials2Position = "UI Designer";
-  static const String testimonials2 =
-      "What a fantastic day it's been at Step Pay! Huge shoutout to the team for connecting us all and making this amazing event possible. She bring fresh ideas and challenges to the way our industry typically markets products. This year I brought friends. Come say hi! Development is one of our values & a theme of Step Pay talks.";
-
-  //Blog Section
-  static const String myBlog = "my blog";
-  static const String blogSectionTitle1 = "Read My Own";
-  static const String blogSectionTitle2 = "Blog. Be Trendy";
-  static const String blogDesc =
-      "We met years ago at an advertising agency where we learned a ton of dos and some don'ts. There were project deadlines, happy hours, client proposals and a few sparks flying.";
-  static const String blogViewAll = "View All";
-  static const String blogCategory1 = "inspiration";
-  static const String blogCategory2 = "design";
-  static const String blogCategory3 = "creative";
-  static const String blogDate = "February 4, 2020";
-  static const String blogTitle1 = "How Much Does a Website Cost to Build?";
-  static const String blogTitle2 = "10 Tips How Create Best Packaging Design";
-  static const String blogTitle3 = "How Get Your Visitors Love Your Brand";
-  static const String readMore = "Read More";
-  static const String blogging = "Blogging";
 
   //Footer Section
   static const String letsTalk = "Let's Talk!";
@@ -194,10 +144,5 @@ class StringConst {
   static const String stepPayURL = "https://steppay.us/";
   static const String behanceURL = "https://www.behance.net/";
   static const String dribbleURL = "https://dribbble.com/";
-  static const String linkedInURL = "https:linkedin.com/in/";
-  static const String instagramURL = "https://www.instagram.com/";
-  static const String githubURL = "https://github.com/";
-  static const String facebookURL = "https://facebook.com/";
-  static const String twitterURL = "http://twitter.com/";
   static const String designURL = "https://steppay.us/deeps_website";
 }
