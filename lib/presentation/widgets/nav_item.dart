@@ -5,7 +5,7 @@ import 'package:deeps_website/values/values.dart';
 
 import 'animated_indicator.dart';
 
-const double indicatorWidth = Sizes.width60;
+const double indicatorWidth = Sizes.width120;
 
 class NavItemData {
   final String name;
@@ -23,7 +23,7 @@ class NavItem extends StatefulWidget {
   const NavItem({
     super.key,
     required this.title,
-    this.titleColor = AppColors.black,
+    this.titleColor = AppColors.white,
     this.isSelected = false,
     this.isMobile = false,
     this.titleStyle,

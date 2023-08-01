@@ -5,7 +5,7 @@ class AnimatedHoverIndicator extends StatelessWidget {
   const AnimatedHoverIndicator({
     super.key,
     required this.width,
-    this.indicatorColor = AppColors.yellow450,
+    this.indicatorColor = AppColors.purple400,
     this.height = Sizes.size6,
     this.curve = Curves.linearToEaseOut,
     this.isHover = false,

@@ -48,7 +48,7 @@ class HeaderSectionWebState extends State<HeaderSectionWeb>
     double headerIntroTextSize = responsiveSize(
       context,
       Sizes.textSize24,
-      Sizes.textSize56,
+      Sizes.textSize50,
       md: Sizes.textSize36,
     );
     double bodyTextSize =
@@ -107,7 +107,7 @@ class HeaderSectionWebState extends State<HeaderSectionWeb>
                       child: RotationTransition(
                         turns: _controller,
                         child: Image.asset(
-                          ImagePath.dotsGlobeYellow,
+                          ImagePath.dotsGlobeGrey,
                           width: sizeOfGoldenGlobe,
                           height: sizeOfGoldenGlobe,
                         ),
@@ -134,9 +134,9 @@ class HeaderSectionWebState extends State<HeaderSectionWeb>
                   Container(
                     margin: EdgeInsets.only(top: heightOfStack * 0.05),
                     child: SelectableText(
-                      StringConst.firstName,
+                      StringConst.companyPresents,
                       style: textTheme.displayLarge?.copyWith(
-                        color: AppColors.grey50,
+                        color: AppColors.purple400,
                         fontSize: headerIntroTextSize * 2,
                       ),
                     ),
@@ -197,7 +197,8 @@ class HeaderSectionWebState extends State<HeaderSectionWeb>
                                   BoxConstraints(maxWidth: screenWidth * 0.35),
                               child: SelectableText(
                                 StringConst.aboutGame,
-                                style: bodyTextStyle?.copyWith(height: 1.5),
+                                style: bodyTextStyle?.copyWith(
+                                    height: 1.5, color: AppColors.white),
                               ),
                             ),
                             const SpaceH40(),

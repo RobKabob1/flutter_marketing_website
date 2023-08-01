@@ -48,7 +48,7 @@ class HeaderImageState extends State<HeaderImage> {
           ),
         ),
         Image.asset(
-          ImagePath.devHeader,
+          ImagePath.planetHeader,
           width: widget.imageWidth,
           height: widget.imageHeight,
           fit: widget.fit,

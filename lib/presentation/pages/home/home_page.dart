@@ -118,7 +118,7 @@ class HomePageState extends State<HomePage>
                       Positioned.fill(
                         child: Align(
                           alignment: Alignment.center,
-                          child: Image.asset(ImagePath.blobBeanAsh),
+                          child: Image.asset(ImagePath.heavyfighter),
                         ),
                       ),
                       Column(

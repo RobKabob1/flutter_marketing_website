@@ -20,7 +20,7 @@ class Data {
       subtitle: StringConst.shopDesc,
       leadingIcon: Icons.done,
       trailingIcon: Icons.chevron_right,
-      circleBgColor: AppColors.yellow100,
+      circleBgColor: AppColors.purple400,
     ),
     DeepsWebsiteCardData(
       title: StringConst.explore,

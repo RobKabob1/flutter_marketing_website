@@ -61,7 +61,7 @@ class NavSectionWebState extends State<NavSectionWeb> {
     return Container(
       height: Sizes.height100,
       decoration: const BoxDecoration(
-        color: Colors.white,
+        color: AppColors.black100,
         boxShadow: [
           Shadows.elevationShadow,
         ],

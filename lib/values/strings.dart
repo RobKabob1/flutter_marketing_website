@@ -17,11 +17,11 @@ class StringConst {
   static const String emailURL = "mailto:<$email>?subject=&body=";
 
   //Header Section
-  static const String firstName = "Step Pay";
+  static const String companyPresents = "Step Pay Presents";
   static const String intro = "Deeps";
   static const String position = "Mobile space warfare";
   static const String aboutGame =
-      "Launch your empire in a new universe. Conquer worlds, expand your armada, and explore unique landscapes all from your mobile device.";
+      "Launch your empire in a new universe created to conquer worlds, expand your armada, and explore unique landscapes all from your mobile device.";
   static const String getStartedToday = "Get Started Today";
   static const String playFree = "Play Free";
   static const String playFreeDesc = "Start building today";

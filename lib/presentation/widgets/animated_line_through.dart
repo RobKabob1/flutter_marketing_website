@@ -60,7 +60,7 @@ class AnimatedLineThroughState extends State<AnimatedLineThrough>
             DefaultTextStyle(
               style: widget.textStyle!.copyWith(
                 color: Colors.transparent,
-                decorationColor: AppColors.yellow500,
+                decorationColor: AppColors.purple500,
                 decorationStyle: TextDecorationStyle.solid,
                 decoration: TextDecoration.underline,
               ),

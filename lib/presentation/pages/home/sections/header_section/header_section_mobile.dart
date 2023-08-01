@@ -84,7 +84,7 @@ class HeaderSectionMobileState extends State<HeaderSectionMobile>
                       child: RotationTransition(
                         turns: _controller,
                         child: Image.asset(
-                          ImagePath.dotsGlobeYellow,
+                          ImagePath.dotsGlobeGrey,
                           width: sizeOfGoldenGlobe,
                           height: sizeOfGoldenGlobe,
                         ),
@@ -111,9 +111,9 @@ class HeaderSectionMobileState extends State<HeaderSectionMobile>
                   Container(
                     margin: EdgeInsets.only(top: heightOfStack * 0.1),
                     child: SelectableText(
-                      StringConst.firstName,
+                      StringConst.companyPresents,
                       style: textTheme.displayLarge?.copyWith(
-                        color: AppColors.grey50,
+                        color: AppColors.purple400,
                         fontSize: headerIntroTextSize * 2.5,
                       ),
                     ),
@@ -177,7 +177,7 @@ class HeaderSectionMobileState extends State<HeaderSectionMobile>
                                 StringConst.aboutGame,
                                 style: bodyTextStyle?.copyWith(
                                   height: 1.5,
-                                  // color: AppColors.black,
+                                  color: AppColors.white,
                                 ),
                               ),
                             ),

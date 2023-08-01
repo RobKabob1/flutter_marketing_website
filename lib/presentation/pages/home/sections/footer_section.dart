@@ -143,7 +143,7 @@ class FooterSectionState extends State<FooterSection> {
               top: -(height * 0.1),
               left: -(height * 0.15),
               child: Image.asset(
-                ImagePath.boxCoverGold,
+                ImagePath.boxCoverGrey,
                 // width: width * 0.6 ,
                 height: height * 0.5,
                 // fit: BoxFit.fill,
@@ -194,7 +194,7 @@ class FooterSectionState extends State<FooterSection> {
               top: -(height * 0.15),
               left: -(height * 0.15),
               child: Image.asset(
-                ImagePath.boxCoverGold,
+                ImagePath.boxCoverGrey,
                 // width: width ,
                 height: height * 0.5,
                 // fit: BoxFit.fill,
