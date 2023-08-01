@@ -37,10 +37,9 @@ class NewsSectionState extends State<NewsSection>
   late Animation<double> _newsScaleAnimation;
   List<List<NewsData>> news = [
     Data.allNews,
-    Data.branding,
-    Data.packaging,
-    Data.photograhy,
-    Data.webDesign,
+    Data.newsList,
+    Data.guidesList,
+    Data.updateNotesList,
   ];
   late List<NewsData> selectedNews;
   late List<NewsCategoryData> newsCategories;

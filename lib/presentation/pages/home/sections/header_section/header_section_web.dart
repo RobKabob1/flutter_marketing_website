@@ -81,7 +81,7 @@ class HeaderSectionWebState extends State<HeaderSectionWeb>
     double dottedGoldenGlobeOffset = sizeOfBlobSm * 0.4;
     double heightOfBlobAndGlobe =
         computeHeight(dottedGoldenGlobeOffset, sizeOfGoldenGlobe, sizeOfBlobSm);
-    double heightOfStack = heightOfBlobAndGlobe * 2;
+    double heightOfStack = heightOfBlobAndGlobe * 1.5;
     double blobOffset = heightOfStack * 0.3;
     return ContentArea(
       child: Stack(

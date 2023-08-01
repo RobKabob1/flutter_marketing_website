@@ -58,8 +58,6 @@ class HeaderImageState extends State<HeaderImage> {
   }
 }
 
-
-
 List<Widget> buildCardRow({
   required BuildContext context,
   required List<DeepsWebsiteCardData> data,

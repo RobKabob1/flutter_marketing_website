@@ -61,7 +61,7 @@ class HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     double screenHeight = heightOfScreen(context);
-    double spacerHeight = screenHeight * 0.10;
+    double spacerHeight = screenHeight * 0.01;
 
     return Scaffold(
       key: _scaffoldKey,
@@ -152,7 +152,7 @@ class HomePageState extends State<HomePage>
                       ),
                     ],
                   ),
-                  SizedBox(height: spacerHeight),
+                  SizedBox(height: spacerHeight * 10),
                   Stack(
                     children: [
                       Positioned(

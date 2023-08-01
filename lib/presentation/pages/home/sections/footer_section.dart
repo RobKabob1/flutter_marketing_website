@@ -18,7 +18,7 @@ List<FooterItem> footerItems = [
   ),
   const FooterItem(
     title: "${StringConst.mailMe}:",
-    subtitle: StringConst.devEmail2,
+    subtitle: StringConst.devEmail,
     iconData: FontAwesomeIcons.paperPlane,
   ),
   const FooterItem(

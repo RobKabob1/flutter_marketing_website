@@ -15,7 +15,7 @@ class StringConst {
   static const String contacts = "Contacts";
 
   static const String registerLogin = "Register/Login";
-  static const String devEmail = "davidcobbina47@gmail.com";
+  static const String devEmail = "robert@steppay.us";
   static const String emailURL = "mailto:<$devEmail>?subject=&body=";
 
   //Header Section
@@ -28,7 +28,6 @@ class StringConst {
       "Product Designer and Digital Creative Director working in design field for";
   static const String aboutMe2 =
       "13 years so far, specialized in UI/UX, Branding and digital designs.";
-  static const String devEmail2 = "robert@steppay.us";
   static const String behance = "Behance";
   static const String behanceID = "behance.net/deeps_website";
   static const String getStartedToday = "Get Started Today";
@@ -106,20 +105,22 @@ class StringConst {
   //Projects Section
   static const String meetMyNews = "Meet My Projects";
   static const String myWorks = "my works";
+
+  static const String newsHeader = "News";
   static const String newsDesc =
       "Product Designer and Digital Creative Director working in design field for 13 years so far, specialized in UI/UX, Branding and digital designs. These are the words we live by in everything we do.";
   static const String allNews = "All Projects";
   static const String all = "All";
-  static const String branding = "Branding";
-  static const String packaging = "Packaging";
-  static const String photography = "Photography";
+  static const String news = "News";
+  static const String guides = "Guides";
+  static const String updateNotes = "Update Notes";
   static const String webDesign = "Web Design";
-  static const String portfolio1Title = "Urban Experience";
-  static const String portfolio2Title = "Graphic Design";
-  static const String portfolio3Title = "Launch Product";
-  static const String portfolio4Title = "3D Animation";
-  static const String portfolio5Title = "Collect Idea";
-  static const String portfolio6Title = "Company Branding";
+  static const String portfolio1Title = "Website Launch";
+  static const String portfolio2Title = "Developed Battle System";
+  static const String portfolio3Title = "Account Registration Available!";
+  static const String portfolio4Title = "Initial Game Development";
+  static const String portfolio5Title = "Ships";
+  static const String portfolio6Title = "Created Resources";
 
   //Awards & Section
   static const String my = "My";
