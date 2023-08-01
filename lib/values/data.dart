@@ -87,7 +87,7 @@ class Data {
       width: 0.225,
     ),
     NewsData(
-      title: StringConst.portfolio3Title,
+      title: StringConst.portfolio4Title,
       category: StringConst.news,
       newsCoverUrl: ImagePath.portfolio4,
       width: 0.2375,

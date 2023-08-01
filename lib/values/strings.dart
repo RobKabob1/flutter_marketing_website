@@ -27,7 +27,7 @@ class StringConst {
   static const String playFreeDesc = "Start building today";
   static const String shop = "Visit Our Store";
   static const String shopDesc = "Shop costmetics and enhancements";
-  static const String explore = "Explore";
+  static const String explore = "Explore the Universe";
   static const String exploreDesc = "Discover what awaits";
 
   //News Section
@@ -44,7 +44,7 @@ class StringConst {
   static const String webDesign = "Web Design";
   static const String portfolio1Title = "Website Launch";
   static const String portfolio2Title = "Developed Battle System";
-  static const String portfolio3Title = "Account Registration Available!";
+  static const String portfolio3Title = "Account Registration";
   static const String portfolio4Title = "Initial Game Development";
   static const String portfolio5Title = "Ships";
   static const String portfolio6Title = "Created Resources";
