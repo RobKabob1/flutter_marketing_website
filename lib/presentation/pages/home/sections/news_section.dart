@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:deeps_website/presentation/layout/adaptive.dart';
-import 'package:deeps_website/presentation/widgets/buttons/deeps_website_button.dart';
 import 'package:deeps_website/presentation/widgets/content_area.dart';
 import 'package:deeps_website/presentation/widgets/deeps_website_info_section.dart';
 import 'package:deeps_website/presentation/widgets/news_item.dart';
@@ -106,11 +105,6 @@ class NewsSectionState extends State<NewsSection>
                   children: [
                     _buildDeepsWebsiteInfoSectionSm(),
                     const SpaceH40(),
-                    DeepsWebsiteButton(
-                      buttonTitle: StringConst.allNews,
-                      buttonColor: AppColors.primaryColor,
-                      onPressed: () {},
-                    ),
                     const SpaceH40(),
                     Wrap(
                       spacing: kSpacing,
@@ -155,11 +149,6 @@ class NewsSectionState extends State<NewsSection>
                             child: _buildDeepsWebsiteInfoSectionLg(),
                           ),
                           const Spacer(),
-                          DeepsWebsiteButton(
-                            buttonTitle: StringConst.allNews,
-                            buttonColor: AppColors.primaryColor,
-                            onPressed: () {},
-                          ),
                         ],
                       ),
                     ),

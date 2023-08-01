@@ -48,31 +48,6 @@ class DeepsWebsiteInfoSection1 extends StatelessWidget {
     return IntrinsicHeight(
       child: Row(
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              RotatedBox(
-                quarterTurns: quarterTurns,
-                child: Text(
-                  sectionTitle,
-                  style: textTheme.bodyMedium?.copyWith(
-                    fontSize: fontSize,
-                    fontWeight: FontWeight.w400,
-                    color: AppColors.grey250,
-                  ),
-                ),
-              ),
-              const SpaceH16(),
-              SizedBox(
-                height: dividerHeight,
-                child: VerticalDivider(
-                  color: dividerColor,
-                  thickness: thickness,
-                ),
-              ),
-            ],
-          ),
-          const SpaceW16(),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
