@@ -209,15 +209,7 @@ class HeaderSectionWebState extends State<HeaderSectionWeb>
                                   buttonTitle: StringConst.getStartedToday,
                                   opensUrl: true,
                                   url: StringConst.emailURL,
-                                  // onPressed: () =>
-                                  //     openUrlLink(StringConst.EMAIL_URL),
                                 ),
-                                // deeps_websiteButtonLink(
-                                //   width: buttonWidth,
-                                //   height: buttonHeight,
-                                //   url: StringConst.EMAIL_URL,
-                                //   buttonTitle: StringConst.HIRE_ME_NOW,
-                                // ),
                               ],
                             ),
                             const SpaceH30(),

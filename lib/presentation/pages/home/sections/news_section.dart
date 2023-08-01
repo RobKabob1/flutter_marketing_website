@@ -173,7 +173,7 @@ class NewsSectionState extends State<NewsSection>
 
   Widget _buildDeepsWebsiteInfoSectionSm() {
     return const DeepsWebsiteInfoSection2(
-      sectionTitle: StringConst.myWorks,
+      sectionTitle: StringConst.newsSection,
       title1: StringConst.ourNews,
       hasTitle2: false,
       body: StringConst.newsDesc,
@@ -183,7 +183,7 @@ class NewsSectionState extends State<NewsSection>
 
   Widget _buildDeepsWebsiteInfoSectionLg() {
     return DeepsWebsiteInfoSection1(
-      sectionTitle: StringConst.myWorks,
+      sectionTitle: StringConst.newsSection,
       title1: StringConst.ourNews,
       hasTitle2: false,
       body: StringConst.newsDesc,
