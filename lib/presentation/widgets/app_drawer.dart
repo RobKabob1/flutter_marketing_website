@@ -98,8 +98,9 @@ class AppDrawerState extends State<AppDrawer> {
           isMobile: true,
           isSelected: menuList[i].isSelected,
           titleStyle: textTheme.bodyLarge?.copyWith(
-            color:
-                menuList[i].isSelected ? AppColors.primary200 : AppColors.white,
+            color: menuList[i].isSelected
+                ? AppColors.primaryColor
+                : AppColors.white,
             fontSize: Sizes.textSize16,
             fontWeight:
                 menuList[i].isSelected ? FontWeight.bold : FontWeight.normal,
