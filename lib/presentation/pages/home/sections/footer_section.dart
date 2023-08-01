@@ -2,9 +2,7 @@ import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:deeps_website/presentation/layout/adaptive.dart';
-import 'package:deeps_website/presentation/widgets/buttons/deeps_website_button.dart';
 import 'package:deeps_website/presentation/widgets/content_area.dart';
-import 'package:deeps_website/presentation/widgets/buttons/deeps_website_button_link.dart';
 import 'package:deeps_website/presentation/widgets/spaces.dart';
 import 'package:deeps_website/utils/functions.dart';
 import 'package:deeps_website/values/values.dart';
@@ -23,8 +21,8 @@ List<FooterItem> footerItems = [
   ),
   const FooterItem(
     title: "${StringConst.followMe2}:",
-    subtitle: StringConst.behanceID,
-    iconData: FontAwesomeIcons.behance,
+    subtitle: StringConst.stepPayURL,
+    iconData: FontAwesomeIcons.globe,
   ),
 ];
 
@@ -173,12 +171,6 @@ class FooterSectionState extends State<FooterSection> {
                   ),
                   const SpaceH60(),
                   ..._buildFooterItems(footerItems),
-                  const SpaceH60(),
-                  DeepsWebsiteButton(
-                    buttonTitle: StringConst.hireMe,
-                    buttonColor: AppColors.primaryColor,
-                    onPressed: () {},
-                  ),
                   const SpaceH80(),
                 ],
               ),
@@ -229,7 +221,7 @@ class FooterSectionState extends State<FooterSection> {
             ),
             Column(
               children: [
-                const Spacer(flex: 2),
+                const Spacer(flex: 1),
                 Text(
                   StringConst.letsTalk,
                   style:
@@ -245,12 +237,6 @@ class FooterSectionState extends State<FooterSection> {
                   ],
                 ),
                 const Spacer(),
-                const DeepsWebsiteButtonLink(
-                  url: StringConst.emailURL,
-                  buttonTitle: StringConst.hireMe,
-                  buttonColor: AppColors.primaryColor,
-                ),
-                const Spacer(flex: 2),
               ],
             ),
           ],

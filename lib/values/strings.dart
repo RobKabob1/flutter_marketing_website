@@ -28,7 +28,6 @@ class StringConst {
       "Product Designer and Digital Creative Director working in design field for";
   static const String aboutMe2 =
       "13 years so far, specialized in UI/UX, Branding and digital designs.";
-  static const String behance = "Behance";
   static const String behanceID = "behance.net/deeps_website";
   static const String getStartedToday = "Get Started Today";
   static const String uiUX = "UI/UX Designer";
@@ -121,9 +120,6 @@ class StringConst {
   static const String portfolio4Title = "Initial Game Development";
   static const String portfolio5Title = "Ships";
   static const String portfolio6Title = "Created Resources";
-
-  //Brands Section
-  static const String hireMe = "Hire me";
 
   //Footer Section
   static const String letsTalk = "Get Connected!";

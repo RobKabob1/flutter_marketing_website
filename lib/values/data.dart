@@ -3,14 +3,6 @@ part of values;
 class Data {
   static List<SocialButton2Data> socialData2 = [
     SocialButton2Data(
-      title: StringConst.behance,
-      iconData: FontAwesomeIcons.behance,
-      url: StringConst.behanceURL,
-      titleColor: AppColors.blue300,
-      buttonColor: AppColors.blue300,
-      iconColor: AppColors.white,
-    ),
-    SocialButton2Data(
       title: StringConst.dribble,
       iconData: FontAwesomeIcons.dribbble,
       url: StringConst.dribbleURL,
