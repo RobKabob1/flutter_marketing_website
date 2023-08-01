@@ -4,8 +4,8 @@ import 'package:deeps_website/values/values.dart';
 
 import 'animated_indicator.dart';
 
-class NewsData {
-  final String newsCoverUrl;
+class ProjectData {
+  final String projectCoverUrl;
   final String title;
   final String category;
   final double width;
@@ -13,8 +13,8 @@ class NewsData {
   final double mobileWidth;
   final double mobileHeight;
 
-  NewsData({
-    required this.newsCoverUrl,
+  ProjectData({
+    required this.projectCoverUrl,
     required this.title,
     required this.category,
     required this.width,
@@ -24,8 +24,8 @@ class NewsData {
   });
 }
 
-class NewsItem extends StatefulWidget {
-  const NewsItem({
+class ProjectItem extends StatefulWidget {
+  const ProjectItem({
     Key? key,
     required this.title,
     required this.subtitle,
@@ -51,10 +51,11 @@ class NewsItem extends StatefulWidget {
   final double? bannerHeight;
 
   @override
-  NewsItemState createState() => NewsItemState();
+  ProjectItemState createState() => ProjectItemState();
 }
 
-class NewsItemState extends State<NewsItem> with TickerProviderStateMixin {
+class ProjectItemState extends State<ProjectItem>
+    with TickerProviderStateMixin {
   late AnimationController _slideFadeController;
   late AnimationController _indicatorController;
   late Animation<double> _indicatorAnimation;

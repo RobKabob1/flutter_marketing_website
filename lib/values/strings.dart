@@ -104,11 +104,11 @@ class StringConst {
   static const String awardWinningNum = "18";
 
   //Projects Section
-  static const String meetMyNews = "Meet My Projects";
+  static const String meetMyProjects = "Meet My Projects";
   static const String myWorks = "my works";
-  static const String newsDesc =
+  static const String projectsDesc =
       "Product Designer and Digital Creative Director working in design field for 13 years so far, specialized in UI/UX, Branding and digital designs. These are the words we live by in everything we do.";
-  static const String allNews = "All Projects";
+  static const String allProjects = "All Projects";
   static const String all = "All";
   static const String branding = "Branding";
   static const String packaging = "Packaging";
