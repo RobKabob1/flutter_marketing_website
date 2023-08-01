@@ -75,8 +75,8 @@ class DeepsWebsiteInfoSection1 extends StatelessWidget {
                 const SpaceH20(),
                 Text(
                   body,
-                  style: textTheme.bodyLarge
-                      ?.copyWith(fontSize: fontSize, height: 1.8),
+                  style: textTheme.bodyLarge?.copyWith(
+                      fontSize: fontSize, height: 1.8, color: AppColors.white),
                 ),
                 child != null ? const SpaceH30() : const Empty(),
                 child ?? const Empty(),
