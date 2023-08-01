@@ -15,8 +15,8 @@ class StringConst {
   static const String contacts = "Contacts";
 
   static const String registerLogin = "Register/Login";
-  static const String devEmail = "robert@steppay.us";
-  static const String emailURL = "mailto:<$devEmail>?subject=&body=";
+
+  static const String emailURL = "mailto:<$email>?subject=&body=";
 
   //Header Section
   static const String firstName = "Step Pay";
@@ -126,19 +126,16 @@ class StringConst {
   static const String hireMe = "Hire me";
 
   //Footer Section
-  static const String letsTalk = "Let's Talk!";
-  static const String phoneMe = "Phone Me";
-  static const String phoneNumber = "+1 800 123 456 789";
-  static const String mailMe = "Mail Me";
-  static const String followMe2 = "Follow Me";
-  static const String followMe2URL = "behance.net/deeps_website";
-  static const String rightsReserved = "© 2022 All rights reserved";
-  static const String builtBy = "Built with Flutter by";
+  static const String letsTalk = "Get Connected!";
+  static const String phoneMe = "Phone Us";
+  static const String phoneNumber = "+1 409 720 9811";
+  static const String mailMe = "Mail Us";
+  static const String email = "info@steppay.us";
+  static const String followMe2 = "Follow Us";
+  static const String followMe2URL = "steppay.us";
+  static const String rightsReserved = "© 2023 All Rights Reserved.";
   static const String designedBy = "Designed by";
   static const String stepPay = "Step Pay";
-  static const String madeInUSA = "Made in";
-  static const String withLove = "with";
-  static const String findMe = "Find me on..";
 
   //URL Links
   static const String stepPayURL = "https://steppay.us/";

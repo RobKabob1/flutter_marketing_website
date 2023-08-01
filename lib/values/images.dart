@@ -28,7 +28,6 @@ class ImagePath {
   static const String devAboutMe = "$imageDir/dev_aboutme.png";
   static const String devHeader = "$imageDir/dev_header.png";
   static const String devAward = "$imageDir/dev_award.png";
-  static const String ghanaFlag = "$imageDir/ghana_flag.png";
 
   // Blog Images
   static const String blog01 = "$imageDir/blog_01.jpg";

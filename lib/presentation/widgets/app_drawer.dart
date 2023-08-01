@@ -1,8 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:deeps_website/presentation/layout/adaptive.dart';
-import 'package:deeps_website/presentation/widgets/spaces.dart';
 import 'package:deeps_website/utils/functions.dart';
 import 'package:deeps_website/values/values.dart';
 
@@ -162,52 +160,6 @@ class AppDrawerState extends State<AppDrawer> {
             ),
             textAlign: TextAlign.center,
           ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            RichText(
-              text: TextSpan(
-                text: "${StringConst.builtBy} ",
-                style: footerTextStyle,
-                children: [
-                  TextSpan(
-                    text: "${StringConst.stepPay}. ",
-                    style: footerTextStyle?.copyWith(
-                      decoration: TextDecoration.underline,
-                      fontWeight: FontWeight.w900,
-                      color: AppColors.white,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-        const SpaceH4(),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(StringConst.madeInUSA, style: footerTextStyle),
-            const SpaceW4(),
-            ClipRRect(
-              borderRadius: const BorderRadius.all(Radius.circular(20)),
-              child: Image.asset(
-                ImagePath.ghanaFlag,
-                width: Sizes.width16,
-                height: Sizes.height16,
-                fit: BoxFit.cover,
-              ),
-            ),
-            const SpaceW4(),
-            Text(StringConst.withLove, style: footerTextStyle),
-            const SpaceW4(),
-            const Icon(
-              FontAwesomeIcons.solidHeart,
-              color: AppColors.red,
-              size: Sizes.iconSize12,
-            ),
-          ],
         ),
       ],
     );

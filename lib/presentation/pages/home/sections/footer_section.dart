@@ -18,7 +18,7 @@ List<FooterItem> footerItems = [
   ),
   const FooterItem(
     title: "${StringConst.mailMe}:",
-    subtitle: StringConst.devEmail,
+    subtitle: StringConst.email,
     iconData: FontAwesomeIcons.paperPlane,
   ),
   const FooterItem(
@@ -95,100 +95,6 @@ class FooterSectionState extends State<FooterSection> {
               ),
               textAlign: TextAlign.center,
             ),
-          ),
-          // deeps_websiteLink(
-          //   url: StringConst.WEB_GENIUS_LAB_URL,
-          //   child: RichText(
-          //     text: TextSpan(
-          //       text: StringConst.RIGHTS_RESERVED + " ",
-          //       style: footerTextStyle,
-          //       children: [
-          //         TextSpan(text: StringConst.DESIGNED_BY + " "),
-          //         TextSpan(
-          //           text: StringConst.WEB_GENIUS_LAB,
-          //           style: footerTextStyle?.copyWith(
-          //             decoration: TextDecoration.underline,
-          //             fontWeight: FontWeight.w900,
-          //             color: AppColors.black,
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //     textAlign: TextAlign.center,
-          //   ),
-          // ),
-          const SpaceH4(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Expanded(
-                child: Center(
-                  child: InkWell(
-                    onTap: () => openUrlLink(StringConst.stepPayURL),
-                    child: RichText(
-                      text: TextSpan(
-                        text: "${StringConst.builtBy} ",
-                        style: footerTextStyle,
-                        children: [
-                          TextSpan(
-                            text: "${StringConst.stepPay}. ",
-                            style: footerTextStyle?.copyWith(
-                              decoration: TextDecoration.underline,
-                              fontWeight: FontWeight.w900,
-                              color: AppColors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  //  deeps_websiteLink(
-                  //   url: StringConst.DAVID_LEGEND_URL,
-                  //   child: RichText(
-                  //     text: TextSpan(
-                  //       text: StringConst.BUILT_BY + " ",
-                  //       style: footerTextStyle,
-                  //       children: [
-                  //         TextSpan(
-                  //           text: StringConst.DAVID_COBBINA + ". ",
-                  //           style: footerTextStyle?.copyWith(
-                  //             decoration: TextDecoration.underline,
-                  //             fontWeight: FontWeight.w900,
-                  //             color: AppColors.black,
-                  //           ),
-                  //         ),
-                  //       ],
-                  //     ),
-                  //   ),
-                  // ),
-                ),
-              ),
-            ],
-          ),
-          const SpaceH4(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(StringConst.madeInUSA, style: footerTextStyle),
-              const SpaceW4(),
-              ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(20)),
-                child: Image.asset(
-                  ImagePath.ghanaFlag,
-                  width: Sizes.width16,
-                  height: Sizes.height16,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              const SpaceW4(),
-              Text(StringConst.withLove, style: footerTextStyle),
-              const SpaceW4(),
-              const Icon(
-                FontAwesomeIcons.solidHeart,
-                color: AppColors.red,
-                size: Sizes.iconSize12,
-              ),
-            ],
           ),
           const SpaceH20(),
         ],
