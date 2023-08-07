@@ -17,7 +17,6 @@ class StringConst {
   static const String emailURL = "mailto:<$email>?subject=&body=";
 
   //Header Section
-  static const String companyPresents = "Step Pay Presents";
   static const String intro = "Deeps";
   static const String position = "Mobile space warfare";
   static const String aboutGame =

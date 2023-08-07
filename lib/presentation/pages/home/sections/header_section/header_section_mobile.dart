@@ -69,15 +69,6 @@ class HeaderSectionMobileState extends State<HeaderSectionMobile>
               children: [
                 Stack(
                   children: [
-                    // Positioned(
-                    //   left: -(sizeOfBlobSm * 0.7),
-                    //   top: blobOffset,
-                    //   child: Image.asset(
-                    //     ImagePath.BLOB_BLACK,
-                    //     height: sizeOfBlobSm,
-                    //     width: sizeOfBlobSm,
-                    //   ),
-                    // ),
                     Positioned(
                       left: -(sizeOfGoldenGlobe / 3),
                       top: blobOffset + dottedGoldenGlobeOffset,
@@ -108,16 +99,6 @@ class HeaderSectionMobileState extends State<HeaderSectionMobile>
             children: [
               Stack(
                 children: [
-                  Container(
-                    margin: EdgeInsets.only(top: heightOfStack * 0.1),
-                    child: SelectableText(
-                      StringConst.companyPresents,
-                      style: textTheme.displayLarge?.copyWith(
-                        color: AppColors.purple400,
-                        fontSize: headerIntroTextSize * 2.5,
-                      ),
-                    ),
-                  ),
                   Container(
                     padding:
                         const EdgeInsets.symmetric(horizontal: sidePadding),

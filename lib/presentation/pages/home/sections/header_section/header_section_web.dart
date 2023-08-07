@@ -132,16 +132,6 @@ class HeaderSectionWebState extends State<HeaderSectionWeb>
               Stack(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: heightOfStack * 0.05),
-                    child: SelectableText(
-                      StringConst.companyPresents,
-                      style: textTheme.displayLarge?.copyWith(
-                        color: AppColors.purple400,
-                        fontSize: headerIntroTextSize * 2,
-                      ),
-                    ),
-                  ),
-                  Container(
                     margin: EdgeInsets.only(
                         top: heightOfStack * 0.2, left: (sizeOfBlobSm * 0.35)),
                     child: Row(
