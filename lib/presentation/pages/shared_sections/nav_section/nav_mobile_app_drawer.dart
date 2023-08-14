@@ -10,14 +10,13 @@ const kSpacing20 = Sizes.size20;
 class AppDrawer extends StatefulWidget {
   final Color color;
   final double? width;
-  final List<NavItemData> menuList;
+
   final GestureTapCallback? onClose;
 
   const AppDrawer({
     super.key,
     this.color = AppColors.black200,
     this.width,
-    required this.menuList,
     this.onClose,
   });
 
@@ -26,6 +25,14 @@ class AppDrawer extends StatefulWidget {
 }
 
 class AppDrawerState extends State<AppDrawer> {
+  final List<NavItemData> menuList = [
+    NavItemData(name: StringConst.home, key: GlobalKey(), isSelected: true),
+    NavItemData(name: StringConst.news, key: GlobalKey()),
+    NavItemData(name: StringConst.wiki, key: GlobalKey()),
+    //NavItemData(name: StringConst.leaderboards, key: GlobalKey()),
+    //NavItemData(name: StringConst.stellarMap, key: GlobalKey()),
+    NavItemData(name: StringConst.market, key: GlobalKey()),
+  ];
   @override
   Widget build(BuildContext context) {
     double defaultWidthOfDrawer = responsiveSize(
@@ -68,7 +75,7 @@ class AppDrawerState extends State<AppDrawer> {
               ),
               const Spacer(flex: 2),
               ..._buildMenuList(
-                menuList: widget.menuList,
+                menuList: menuList,
               ),
               const Spacer(flex: 6),
               _buildFooterText(),
@@ -111,17 +118,17 @@ class AppDrawerState extends State<AppDrawer> {
   _onTapNavItem({
     required String navItemName,
   }) {
-    for (int index = 0; index < widget.menuList.length; index++) {
-      if (navItemName == widget.menuList[index].name) {
+    for (int index = 0; index < menuList.length; index++) {
+      if (navItemName == menuList[index].name) {
         GoRouter.of(
           context,
-        ).go('/wiki');
+        ).go(navItemName);
         setState(() {
-          widget.menuList[index].isSelected = true;
+          menuList[index].isSelected = true;
         });
         _closeDrawer();
       } else {
-        widget.menuList[index].isSelected = false;
+        menuList[index].isSelected = false;
       }
     }
   }

@@ -10,6 +10,8 @@ class WikiPage extends StatefulWidget {
 class _WikiPageState extends State<WikiPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Center(
+      child: Text("Wiki page"),
+    );
   }
 }

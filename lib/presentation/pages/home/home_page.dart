@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:deeps_website/presentation/layout/adaptive.dart';
-import 'package:deeps_website/presentation/pages/sections/footer_section.dart';
+import 'package:deeps_website/presentation/pages/shared_sections/footer_section.dart';
 import 'package:deeps_website/presentation/pages/home/sections/header_section/header_section.dart';
-import 'package:deeps_website/presentation/pages/sections/nav_section/nav_section_mobile.dart';
-import 'package:deeps_website/presentation/pages/sections/nav_section/nav_section_web.dart';
+import 'package:deeps_website/presentation/pages/shared_sections/nav_section/nav_section_mobile.dart';
+import 'package:deeps_website/presentation/pages/shared_sections/nav_section/nav_section_web.dart';
 import 'package:deeps_website/presentation/pages/home/sections/news_section.dart';
-import 'package:deeps_website/presentation/pages/sections/nav_section/nav_mobile_app_drawer.dart';
-import 'package:deeps_website/presentation/widgets/nav_item.dart';
+import 'package:deeps_website/presentation/pages/shared_sections/nav_section/nav_mobile_app_drawer.dart';
 import 'package:deeps_website/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -27,15 +26,6 @@ class HomePageState extends State<HomePage>
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
 
   final ScrollController _scrollController = ScrollController();
-
-  final List<NavItemData> navItems = [
-    NavItemData(name: StringConst.home, key: GlobalKey(), isSelected: true),
-    NavItemData(name: StringConst.news, key: GlobalKey()),
-    NavItemData(name: StringConst.wiki, key: GlobalKey()),
-    NavItemData(name: StringConst.market, key: GlobalKey()),
-    //NavItemData(name: StringConst.leaderboards, key: GlobalKey()),
-    //NavItemData(name: StringConst.stellarMap, key: GlobalKey()),
-  ];
 
   @override
   void dispose() {
@@ -66,9 +56,7 @@ class HomePageState extends State<HomePage>
         builder: (context, sizingInformation) {
           double screenWidth = sizingInformation.screenSize.width;
           if (screenWidth < const RefinedBreakpoints().desktopSmall) {
-            return AppDrawer(
-              menuList: navItems,
-            );
+            return const AppDrawer();
           } else {
             return Container();
           }
@@ -83,9 +71,7 @@ class HomePageState extends State<HomePage>
               if (screenWidth < const RefinedBreakpoints().desktopSmall) {
                 return NavSectionMobile(scaffoldKey: _scaffoldKey);
               } else {
-                return NavSectionWeb(
-                  navItems: navItems,
-                );
+                return NavSectionWeb();
               }
             },
           ),
@@ -104,9 +90,7 @@ class HomePageState extends State<HomePage>
                       ),
                       Column(
                         children: [
-                          HeaderSection(
-                            key: navItems[0].key,
-                          ),
+                          const HeaderSection(),
                           SizedBox(height: spacerHeight),
                         ],
                       )
@@ -126,10 +110,7 @@ class HomePageState extends State<HomePage>
                       Column(
                         children: [
                           SizedBox(height: spacerHeight),
-                          Container(
-                            key: navItems[1].key,
-                            child: const NewsSection(),
-                          ),
+                          const NewsSection(),
                         ],
                       ),
                     ],

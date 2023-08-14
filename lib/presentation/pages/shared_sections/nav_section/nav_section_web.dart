@@ -21,9 +21,16 @@ const int menuSpacerRightMd = 4;
 const int menuSpacerRightSm = 3;
 
 class NavSectionWeb extends StatefulWidget {
-  final List<NavItemData> navItems;
+  final List<NavItemData> navItems = [
+    NavItemData(name: StringConst.home, key: GlobalKey(), isSelected: true),
+    NavItemData(name: StringConst.news, key: GlobalKey()),
+    NavItemData(name: StringConst.wiki, key: GlobalKey()),
+    //NavItemData(name: StringConst.leaderboards, key: GlobalKey()),
+    //NavItemData(name: StringConst.stellarMap, key: GlobalKey()),
+    NavItemData(name: StringConst.market, key: GlobalKey()),
+  ];
 
-  const NavSectionWeb({super.key, required this.navItems});
+  NavSectionWeb({super.key});
 
   @override
   NavSectionWebState createState() => NavSectionWebState();
@@ -105,7 +112,7 @@ class NavSectionWebState extends State<NavSectionWeb> {
       if (navItemName == widget.navItems[index].name) {
         GoRouter.of(
           context,
-        ).go('/wiki');
+        ).go('/' + navItemName);
         setState(
           () {
             widget.navItems[index].isSelected = true;
