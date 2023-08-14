@@ -68,7 +68,6 @@ class AppDrawerState extends State<AppDrawer> {
               ),
               const Spacer(flex: 2),
               ..._buildMenuList(
-                //context: context,
                 menuList: widget.menuList,
               ),
               const Spacer(flex: 6),
@@ -81,7 +80,6 @@ class AppDrawerState extends State<AppDrawer> {
   }
 
   List<Widget> _buildMenuList({
-    //required BuildContext context,
     required List<NavItemData> menuList,
   }) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -90,7 +88,6 @@ class AppDrawerState extends State<AppDrawer> {
       menuItems.add(
         NavItem(
           onTap: () => _onTapNavItem(
-            //context: menuList[i].key,
             navItemName: menuList[i].name,
           ),
           title: menuList[i].name,
@@ -112,7 +109,6 @@ class AppDrawerState extends State<AppDrawer> {
   }
 
   _onTapNavItem({
-    //required GlobalKey context,
     required String navItemName,
   }) {
     for (int index = 0; index < widget.menuList.length; index++) {
