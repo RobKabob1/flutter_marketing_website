@@ -110,9 +110,15 @@ class NavSectionWebState extends State<NavSectionWeb> {
   }) {
     for (int index = 0; index < widget.navItems.length; index++) {
       if (navItemName == widget.navItems[index].name) {
-        GoRouter.of(
-          context,
-        ).go('/' + navItemName);
+        if (navItemName == 'Home') {
+          GoRouter.of(
+            context,
+          ).go('/');
+        } else {
+          GoRouter.of(
+            context,
+          ).go('/$navItemName');
+        }
         setState(
           () {
             widget.navItems[index].isSelected = true;

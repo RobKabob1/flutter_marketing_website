@@ -7,14 +7,14 @@ import 'package:deeps_website/presentation/pages/shared_sections/nav_section/nav
 import 'package:deeps_website/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class NewsPage extends StatefulWidget {
-  const NewsPage({super.key});
+class MarketPage extends StatefulWidget {
+  const MarketPage({super.key});
 
   @override
-  State<NewsPage> createState() => _NewsPageState();
+  State<MarketPage> createState() => _MarketPageState();
 }
 
-class _NewsPageState extends State<NewsPage> {
+class _MarketPageState extends State<MarketPage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
   final ScrollController _scrollController = ScrollController();
   @override
@@ -56,7 +56,7 @@ class _NewsPageState extends State<NewsPage> {
                   Column(
                     children: [
                       SizedBox(height: spacerHeight),
-                      const Text("News Coming Soon!"),
+                      const Text("Market Coming Soon!"),
                     ],
                   ),
                   SizedBox(height: spacerHeight * 10),

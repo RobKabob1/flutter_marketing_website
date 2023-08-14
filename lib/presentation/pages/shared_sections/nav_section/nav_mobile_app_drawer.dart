@@ -122,7 +122,7 @@ class AppDrawerState extends State<AppDrawer> {
       if (navItemName == menuList[index].name) {
         GoRouter.of(
           context,
-        ).go(navItemName);
+        ).go('/$navItemName');
         setState(() {
           menuList[index].isSelected = true;
         });
