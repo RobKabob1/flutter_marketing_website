@@ -1,10 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:deeps_website/presentation/layout/adaptive.dart';
-import 'package:deeps_website/utils/functions.dart';
 import 'package:deeps_website/values/values.dart';
-
-import 'nav_item.dart';
+import 'package:go_router/go_router.dart';
+import 'package:deeps_website/presentation/widgets/nav_item.dart';
 
 const kSpacing20 = Sizes.size20;
 
@@ -69,7 +68,7 @@ class AppDrawerState extends State<AppDrawer> {
               ),
               const Spacer(flex: 2),
               ..._buildMenuList(
-                context: context,
+                //context: context,
                 menuList: widget.menuList,
               ),
               const Spacer(flex: 6),
@@ -82,7 +81,7 @@ class AppDrawerState extends State<AppDrawer> {
   }
 
   List<Widget> _buildMenuList({
-    required BuildContext context,
+    //required BuildContext context,
     required List<NavItemData> menuList,
   }) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -91,7 +90,7 @@ class AppDrawerState extends State<AppDrawer> {
       menuItems.add(
         NavItem(
           onTap: () => _onTapNavItem(
-            context: menuList[i].key,
+            //context: menuList[i].key,
             navItemName: menuList[i].name,
           ),
           title: menuList[i].name,
@@ -113,12 +112,14 @@ class AppDrawerState extends State<AppDrawer> {
   }
 
   _onTapNavItem({
-    required GlobalKey context,
+    //required GlobalKey context,
     required String navItemName,
   }) {
     for (int index = 0; index < widget.menuList.length; index++) {
       if (navItemName == widget.menuList[index].name) {
-        scrollToSection(context.currentContext!);
+        GoRouter.of(
+          context,
+        ).go('/wiki');
         setState(() {
           widget.menuList[index].isSelected = true;
         });

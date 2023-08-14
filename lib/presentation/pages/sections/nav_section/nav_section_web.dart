@@ -3,8 +3,8 @@ import 'package:deeps_website/presentation/layout/adaptive.dart';
 import 'package:deeps_website/presentation/widgets/buttons/deeps_website_button.dart';
 import 'package:deeps_website/presentation/widgets/nav_item.dart';
 import 'package:deeps_website/presentation/widgets/deeps_website_vertical_divider.dart';
-import 'package:deeps_website/utils/functions.dart';
 import 'package:deeps_website/values/values.dart';
+import 'package:go_router/go_router.dart';
 
 const double logoSpaceLeftLg = 40.0;
 const double logoSpaceLeftSm = 20.0;
@@ -99,16 +99,13 @@ class NavSectionWebState extends State<NavSectionWeb> {
   }
 
   _onTapNavItem({
-    required GlobalKey context,
     required String navItemName,
   }) {
     for (int index = 0; index < widget.navItems.length; index++) {
       if (navItemName == widget.navItems[index].name) {
-        if (navItemName == "Wiki") {
-          goToRoute(context.currentContext!, );
-        } else {
-          scrollToSection(context.currentContext!);
-        }
+        GoRouter.of(
+          context,
+        ).go('/wiki');
         setState(
           () {
             widget.navItems[index].isSelected = true;
@@ -122,13 +119,13 @@ class NavSectionWebState extends State<NavSectionWeb> {
 
   List<Widget> _buildNavItems(List<NavItemData> navItems) {
     List<Widget> items = [];
+
     for (int index = 0; index < navItems.length; index++) {
       items.add(
         NavItem(
           title: navItems[index].name,
           isSelected: navItems[index].isSelected,
           onTap: () => _onTapNavItem(
-            context: navItems[index].key,
             navItemName: navItems[index].name,
           ),
         ),

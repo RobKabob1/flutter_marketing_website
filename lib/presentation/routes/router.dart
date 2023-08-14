@@ -12,7 +12,7 @@ final GoRouter deepsWebsiteRouter = GoRouter(
       },
       routes: <RouteBase>[
         GoRoute(
-          path: 'Wiki',
+          path: 'wiki',
           builder: (BuildContext context, GoRouterState state) {
             return const WikiPage(title: 'Wiki');
           },

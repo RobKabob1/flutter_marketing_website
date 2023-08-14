@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:deeps_website/presentation/layout/adaptive.dart';
-import 'package:deeps_website/presentation/pages/home/sections/footer_section.dart';
+import 'package:deeps_website/presentation/pages/sections/footer_section.dart';
 import 'package:deeps_website/presentation/pages/home/sections/header_section/header_section.dart';
-import 'package:deeps_website/presentation/pages/home/sections/nav_section/nav_section_mobile.dart';
-import 'package:deeps_website/presentation/pages/home/sections/nav_section/nav_section_web.dart';
+import 'package:deeps_website/presentation/pages/sections/nav_section/nav_section_mobile.dart';
+import 'package:deeps_website/presentation/pages/sections/nav_section/nav_section_web.dart';
 import 'package:deeps_website/presentation/pages/home/sections/news_section.dart';
-import 'package:deeps_website/presentation/widgets/app_drawer.dart';
+import 'package:deeps_website/presentation/pages/sections/nav_section/nav_mobile_app_drawer.dart';
 import 'package:deeps_website/presentation/widgets/nav_item.dart';
 import 'package:deeps_website/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
