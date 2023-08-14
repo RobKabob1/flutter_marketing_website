@@ -1,3 +1,4 @@
+import 'package:deeps_website/presentation/pages/wiki/wiki_page.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -17,5 +18,16 @@ scrollToSection(BuildContext context) {
   Scrollable.ensureVisible(
     context,
     duration: kDuration,
+  );
+}
+
+goToRoute(BuildContext context) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => const WikiPage(
+        title: 'Wiki',
+      ),
+    ),
   );
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:deeps_website/presentation/pages/home/home_page.dart';
+import 'package:deeps_website/presentation/pages/wiki/wiki_page.dart';
 
 final GoRouter deepsWebsiteRouter = GoRouter(
   routes: <RouteBase>[
@@ -9,6 +10,14 @@ final GoRouter deepsWebsiteRouter = GoRouter(
       builder: (BuildContext context, GoRouterState state) {
         return const HomePage();
       },
+      routes: <RouteBase>[
+        GoRoute(
+          path: 'Wiki',
+          builder: (BuildContext context, GoRouterState state) {
+            return const WikiPage(title: 'Wiki');
+          },
+        ),
+      ],
     ),
   ],
 );

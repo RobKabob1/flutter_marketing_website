@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:deeps_website/presentation/layout/adaptive.dart';
 import 'package:deeps_website/presentation/pages/home/sections/footer_section.dart';
 import 'package:deeps_website/presentation/pages/home/sections/header_section/header_section.dart';
@@ -8,7 +7,6 @@ import 'package:deeps_website/presentation/pages/home/sections/nav_section/nav_s
 import 'package:deeps_website/presentation/pages/home/sections/news_section.dart';
 import 'package:deeps_website/presentation/widgets/app_drawer.dart';
 import 'package:deeps_website/presentation/widgets/nav_item.dart';
-import 'package:deeps_website/utils/functions.dart';
 import 'package:deeps_website/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -25,11 +23,7 @@ class HomePageState extends State<HomePage>
     duration: const Duration(milliseconds: 300),
     vsync: this,
   );
-  late final Animation<double> _animation = CurvedAnimation(
-    parent: _controller,
-    curve: Curves.easeInOut,
-  );
-  // bool isFabVisible = false;
+
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
 
   final ScrollController _scrollController = ScrollController();
@@ -79,20 +73,6 @@ class HomePageState extends State<HomePage>
             return Container();
           }
         },
-      ),
-      floatingActionButton: ScaleTransition(
-        scale: _animation,
-        child: FloatingActionButton(
-          onPressed: () {
-            // Scroll to header section
-            scrollToSection(navItems[0].key.currentContext!);
-          },
-          child: const Icon(
-            FontAwesomeIcons.arrowUp,
-            size: Sizes.iconSize18,
-            color: AppColors.white,
-          ),
-        ),
       ),
       body: Column(
         children: [

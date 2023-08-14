@@ -87,7 +87,7 @@ class NavSectionWebState extends State<NavSectionWeb> {
             DeepsWebsiteButton(
               buttonTitle: StringConst.registerLogin,
               width: contactBtnWidth,
-              // onPressed: () => openUrlLink(StringConst.EMAIL_URL),
+              // onPressed: () => openUrlLink(StringConst.SendToRegister/LoginScreen),
               opensUrl: true,
               url: StringConst.emailURL,
             ),
@@ -104,10 +104,16 @@ class NavSectionWebState extends State<NavSectionWeb> {
   }) {
     for (int index = 0; index < widget.navItems.length; index++) {
       if (navItemName == widget.navItems[index].name) {
-        scrollToSection(context.currentContext!);
-        setState(() {
-          widget.navItems[index].isSelected = true;
-        });
+        if (navItemName == "Wiki") {
+          goToRoute(context.currentContext!, );
+        } else {
+          scrollToSection(context.currentContext!);
+        }
+        setState(
+          () {
+            widget.navItems[index].isSelected = true;
+          },
+        );
       } else {
         widget.navItems[index].isSelected = false;
       }
