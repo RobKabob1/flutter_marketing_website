@@ -15,6 +15,11 @@ All things considered, I would opt to use a marketing-based CMS for a web landin
 In Flutter's own words [here](https://docs.flutter.dev/platform-integration/web/faq)
 
 ```
-In general, Flutter is geared towards dynamic application experiences. Flutter's web support is no exception.
-Flutter web prioritizes performance, fidelity, and consistency. This means application output does not align with what search engines need to properly index. For web content that is static or document-like, we recommend using HTML—just like we do on flutter.dev, dart.dev, and pub.dev. You should also consider separating your primary application experience—created in Flutter—from your landing page, marketing content, and help content—created using search-engine optimized HTML.
+In general, Flutter is geared towards dynamic application experiences. Flutter's web support
+is no exception. Flutter web prioritizes performance, fidelity, and consistency. This means
+application output does not align with what search engines need to properly index. For web
+content that is static or document-like, we recommend using HTML—just like we do on
+flutter.dev, dart.dev, and pub.dev. You should also consider separating your primary
+application experience—created in Flutter—from your landing page, marketing content, and help
+content—created using search-engine optimized HTML.
 ```
