@@ -1,4 +1,4 @@
-# fake_game_website
+# Video Game Marketing Website
 
 Website for a fake game showcasing Flutter's ability to make a marketing web page
 
