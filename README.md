@@ -1,6 +1,8 @@
 # Video Game Marketing Website
 
-Website for a fake game showcasing Flutter's ability to make a marketing web page
+Website for a fake game showcasing Flutter's ability to make a marketing web page.
+
+The live site is located [here](https://deeps-website.web.app/).
 
 ### Advantages
 - Highly capable in creating excellent, quality websites
