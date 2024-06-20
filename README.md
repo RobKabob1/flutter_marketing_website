@@ -4,6 +4,8 @@ Website for a fake game showcasing Flutter's ability to make a marketing web pag
 
 The live site is located [here](https://deeps-website.web.app/).
 
+https://github.com/RobKabob1/flutter_marketing_website/assets/171582167/e8f170ed-7179-4ec3-82c7-d6b5a08b943b
+
 ### Advantages
 - Highly capable in creating excellent, quality websites
 - Responsive based on screen size
